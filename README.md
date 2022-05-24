@@ -1,1 +1,3 @@
-# goit-markup-hw-05
+# goit-homesection_1
+
+Депозиторий для домашней работы-1
