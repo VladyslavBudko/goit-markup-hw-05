@@ -23,9 +23,6 @@
   --icon-footer-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Іноді є питання, позначені:
- Питання до ментора!!!!!!!!!!!!!*/
-
 /* сброс стандартных параметров */
 h1,
 h2,
@@ -121,6 +118,13 @@ body {
   color: var(--primary-color);
 }
 
+.logo:hover .logo-header,
+.logo:focus .logo-header,
+.logo:hover .logo-footer,
+.logo:focus .logo-footer {
+  color: var(--accent-color);
+}
+
 /* Header */
 
 .header-container {
@@ -142,13 +146,8 @@ body {
   align-items: center;
 }
 
-.header-contact-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .header-link {
+  display: block;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -160,33 +159,25 @@ body {
 }
 
 .header-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--text-description-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  display: block;
   padding: 32px 0;
 
   text-decoration: none;
 }
 
-/*  header/footer logo,nav */
-
-.logo-header:hover,
-.logo-header:focus,
-.logo-footer:hover,
-.logo-footer:focus {
-  color: var(--accent-color);
-}
-
 .header-link:hover,
 .header-link:focus,
 .header-contact:hover,
-.header-contact:focus,
-.header-icon:focus,
-.header-icon:hover {
+.header-contact:focus {
   color: var(--accent-color);
 }
 
@@ -215,13 +206,6 @@ body {
   color: var(--accent-color);
 }
 
-.address-footer:hover,
-.address-footer:focus,
-.footer-contact:hover,
-.footer-contact:focus {
-  color: var(--accent-color);
-}
-
 /* hero */
 .hero-container {
   width: 1200px;
@@ -232,7 +216,7 @@ body {
 .hero {
   background-color: var(--hero-background);
   height: 600px;
-  padding: 200px;
+  padding: 200px 0;
 
   width: 1600px;
   margin-left: auto;
@@ -443,7 +427,7 @@ background-color: var(--hero-button-hover);
 }
 
 .socials-link:hover,
-.socialslink:focus {
+.socials-link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-color);
   cursor: pointer;
@@ -473,26 +457,46 @@ background-color: var(--hero-button-hover);
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
 
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 170px;
   height: 92px;
+
+
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
+
 }
 
 .clients-icon {
   fill: var(--icon-main-color);
 }
 
-.clients-item:hover,
-.clients-item:focus,
-.clients-icon:hover,
-.clients-icon:focus {
+
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--accent-color);
+
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--accent-color);
 }
 
-
 /* footer */
+
+.address-footer:hover,
+.address-footer:focus,
+.footer-contact:hover,
+.footer-contact:focus {
+  color: var(--accent-color);
+}
 
 .footer {
   background-color: var(--hero-background);
@@ -501,6 +505,7 @@ background-color: var(--hero-button-hover);
 
 .footer-list {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-item:not(:last-child) {
@@ -668,8 +673,8 @@ background-color: var(--hero-button-hover);
   margin-top: var(--card-set-gap);
 }
 
-.projects-item:hover,
-.projects-item:focus {
+.projects-card:hover,
+.projects-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -684,6 +689,7 @@ background-color: var(--hero-button-hover);
 }
 
 .projects-card {
+  display: block;
   border-radius: 4px;
   overflow: hidden;
 }
