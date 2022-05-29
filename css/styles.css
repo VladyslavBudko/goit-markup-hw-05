@@ -350,6 +350,7 @@ background-color: var(--hero-button-hover);
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 .backdrop.is-hidden {
@@ -854,11 +855,45 @@ background-color: var(--hero-button-hover);
   padding: 20px 24px;
   border: 1px solid var(--projects-border-color);
   border-top: 0;
+
 }
 
 .projects-card {
+
   display: block;
   border-radius: 4px;
-  overflow: hidden;
+
   transition: box-shadow var(--animation);
+}
+
+.overlay-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-description {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+  padding: 64px 24px;
+
+  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--animation), opacity var(--animation);
+}
+
+
+.projects-card:hover .overlay-description {
+  transform: translateY(0);
+  opacity: 1;
 }
