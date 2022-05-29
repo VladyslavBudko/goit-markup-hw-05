@@ -183,6 +183,21 @@ body {
   background-color: var(--accent-color);
   border-radius: 2px;
 
+  /* opacity: 1;
+  transform: scaleX(1); */
+  animation: header-current 1s forwards;
+}
+
+@keyframes header-current {
+  0% {
+    transform: scaleX(0);
+    transform: opacity: 0;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform: opacity: 1;
+  }
 }
 
 .header-contact {
