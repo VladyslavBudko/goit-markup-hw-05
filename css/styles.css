@@ -855,11 +855,9 @@ background-color: var(--hero-button-hover);
   padding: 20px 24px;
   border: 1px solid var(--projects-border-color);
   border-top: 0;
-
 }
 
 .projects-card {
-
   display: block;
   border-radius: 4px;
 
@@ -893,7 +891,8 @@ background-color: var(--hero-button-hover);
 }
 
 
-.projects-card:hover .overlay-description {
+.projects-card:hover .overlay-description,
+.projects-card:focus .overlay-description {
   transform: translateY(0);
   opacity: 1;
 }
