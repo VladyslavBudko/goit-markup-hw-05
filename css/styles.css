@@ -351,6 +351,8 @@ background-color: var(--hero-button-hover);
 
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
+
+  transition: opacity var(--animation), visibility var(--animation);
 }
 
 .backdrop.is-hidden {
@@ -371,6 +373,22 @@ background-color: var(--hero-button-hover);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: transform var(--animation), opacity var(--animation) 200ms;
+}
+
+/* Початок */
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.3);
+  opacity: 0;
+}
+
+/* Кінець */
+
+.backdrop .modal {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .modal-btn {
@@ -385,8 +403,6 @@ background-color: var(--hero-button-hover);
   width: 30px;
   height: 30px;
   padding: 0;
-  /* align-items: center;
-  justify-content: center; */
 
   background-color: var(--primary-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
