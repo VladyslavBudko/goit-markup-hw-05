@@ -183,10 +183,10 @@ body {
   background-color: var(--accent-color);
   border-radius: 2px;
 
-  /* opacity: 1;
-  transform: scaleX(1); */
   animation: header-current 1s forwards;
 }
+
+/* Анимация подчеркивания */
 
 @keyframes header-current {
   0% {
@@ -312,6 +312,8 @@ body {
   animation: swing 10s ease-in-out infinite forwards;
 }
 
+/* Анимация раскачивания кнопки */
+
 @keyframes swing {
   0% {
     transform: rotate(3deg);
@@ -335,9 +337,8 @@ body {
 }
 
 .button-hero:hover,
-.button-hero:focus,
-{
-background-color: var(--hero-button-hover);
+.button-hero:focus {
+  background-color: var(--hero-button-hover);
 }
 
 /* Модальное окно */
@@ -377,14 +378,14 @@ background-color: var(--hero-button-hover);
   transition: transform var(--animation), opacity var(--animation) 200ms;
 }
 
-/* Початок */
+/* Начало открытия окна */
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.3);
   opacity: 0;
 }
 
-/* Кінець */
+/* Окончание открытия */
 
 .backdrop .modal {
   transform: translate(-50%, -50%) scale(1);
@@ -404,10 +405,16 @@ background-color: var(--hero-button-hover);
   height: 30px;
   padding: 0;
 
+
   background-color: var(--primary-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
   cursor: pointer;
+  border: 1px solid var(--accent-color);
 }
 
 /* Особенности features  */
