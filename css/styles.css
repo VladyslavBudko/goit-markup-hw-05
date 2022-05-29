@@ -11,6 +11,8 @@
   --primary-background: #e5e5e5;
   --secondary-background: #f5f4fa;
 
+  --doing-bgc: rgba(47, 48, 58, 0.8);
+
   --logo-header: #000000;
   --mail-phone-footer: rgba(255, 255, 255, 0.6);
 
@@ -148,6 +150,7 @@ body {
 
 .header-link {
   display: block;
+  position: relative;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -156,6 +159,20 @@ body {
 
   padding: 32px 0;
   text-decoration: none;
+}
+
+.header-link.current::after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .header-contact {
@@ -335,6 +352,47 @@ background-color: var(--hero-button-hover);
 
 .doing .section-item:not(:last-child) {
   margin-right: 30px;
+  position: relative;
+}
+
+.doing .section-item {
+  position: relative;
+}
+
+.doing .section-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+  background-color: var(--doing-bgc);
+
+  /* text-align: center;
+  padding: 27px 0; */
+}
+
+.doing-bgtext {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 27px 0;
+
+  position: absolute;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-color);
 }
 
 /* team */
