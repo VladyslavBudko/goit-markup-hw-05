@@ -493,21 +493,24 @@ body {
   left: 0;
   bottom: 0;
 
+  /* justify-content: center;
+  align-items: center; */
+
   width: 100%;
   height: 70px;
   background-color: var(--doing-bgc);
 }
 
 .doing-bgtext {
-  display: block;
+  display: flex;
   position: absolute;
   left: 0;
   bottom: 0;
-  text-align: center;
-  padding: 27px 0;
-
-  position: absolute;
   width: 100%;
+  height: 70px;
+
+  justify-content: center;
+  align-items: center;
 
   font-weight: 700;
   font-size: 14px;
@@ -602,7 +605,7 @@ body {
   background-color: var(--primary-color);
 
   fill: var(--icon-main-color);
-  transition: background-color var(--animation), fill var(--animation);
+  transition: background-color var(--animation);
 }
 
 .socials-item:not(:last-child) {
